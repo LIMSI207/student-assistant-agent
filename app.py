@@ -21,8 +21,6 @@ from auth import (
     login_user
 )
 
-# ---------------- CONFIGURATION ----------------
-
 load_dotenv()
 
 st.set_page_config(
@@ -34,8 +32,6 @@ st.set_page_config(
 
 init_db()
 init_auth_db()
-
-# ---------------- CUSTOM CSS ----------------
 
 st.markdown("""
 <style>
@@ -176,8 +172,6 @@ hr { border-color:#40345f !important; }
 """, unsafe_allow_html=True)
 
 
-# ---------------- SESSION STATE ----------------
-
 if "user" not in st.session_state:
     st.session_state.user = None
 
@@ -210,10 +204,6 @@ def go_to_page(target):
     st.session_state["navigation"] = target
 
 
-# ==================================================
-#                  LOGIN SYSTEM
-# ==================================================
-
 if st.session_state.user is None:
 
     st.markdown('<div class="auth-wrap">', unsafe_allow_html=True)
@@ -223,7 +213,7 @@ if st.session_state.user is None:
         "✨ Register"
     ])
 
-    # LOGIN
+    
 
     with login_tab:
 
@@ -258,8 +248,6 @@ if st.session_state.user is None:
             else:
 
                 st.error("Invalid Email or Password.")
-
-    # REGISTER
 
     with register_tab:
 
@@ -311,11 +299,6 @@ if st.session_state.user is None:
     st.markdown("</div>", unsafe_allow_html=True)
 
     st.stop()
-
-
-# ==================================================
-#                    SIDEBAR
-# ==================================================
 
 user = st.session_state.user
 
@@ -382,11 +365,6 @@ with st.sidebar:
         st.session_state.chat_history = []
 
         st.rerun()
-
-
-# ==================================================
-#                    DASHBOARD
-# ==================================================
 
 if page == "Dashboard":
 
@@ -502,10 +480,6 @@ if page == "Dashboard":
         st.info("No student records available yet.")
 
 
-# ==================================================
-#                   ADD STUDENT
-# ==================================================
-
 elif page == "Add Student":
 
     with st.form("add_student_form", clear_on_submit=True):
@@ -538,10 +512,6 @@ elif page == "Add Student":
             "Student added successfully!"
         )
 
-
-# ==================================================
-#                   VIEW STUDENTS
-# ==================================================
 
 elif page == "View Students":
 
@@ -596,11 +566,6 @@ elif page == "View Students":
 
         st.info("No students found.")
 
-
-# ==================================================
-#                  SEARCH STUDENT
-# ==================================================
-
 elif page == "Search Student":
 
 
@@ -640,11 +605,6 @@ elif page == "Search Student":
         else:
 
             st.warning("Please enter a student name.")
-
-
-# ==================================================
-#                  UPDATE STUDENT
-# ==================================================
 
 elif page == "Update Student":
 
@@ -713,11 +673,6 @@ elif page == "Update Student":
 
         st.info("No student records available.")
 
-
-# ==================================================
-#                  DELETE STUDENT
-# ==================================================
-
 elif page == "Delete Student":
 
     students = list_students()
@@ -764,11 +719,6 @@ elif page == "Delete Student":
 
         st.info("No student records available.")
 
-
-# ==================================================
-#                    EXPORT CSV
-# ==================================================
-
 elif page == "Export CSV":
     students = list_students()
 
@@ -809,9 +759,6 @@ elif page == "Export CSV":
         )
 
 
-# ==================================================
-#                   AI ASSISTANT
-# ==================================================
 
 elif page == "AI Assistant":
     st.markdown(

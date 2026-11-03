@@ -1,47 +1,94 @@
-# Student Assistant Agent
+🎓 Student Assistant Agent
 
-An AI-powered Student Assistant built using Python, Agno, Google Gemini, and SQLite.
+Smart Student Management System
 
-## Features
-- Answers general questions using Google Gemini.
-- Searches student records.
-- Lists students and counts student records.
-- Supports adding, updating, and deleting student records through database tools.
-- Stores student data in an SQLite database.
+A Python-based Student Management System powered by Streamlit, SQLite, and AI integration. It helps manage student records efficiently through a simple and user-friendly interface.
 
-## Technologies Used
-- Python
-- Agno
-- Google Gemini
-- SQLite
-- python-dotenv
+✨ Features
 
-## Setup Instructions
+* 🔐 Login & Logout – Secure email and password authentication.
+* 👨‍🎓 Add Students – Register new student records.
+* 🔍 Search Students – Find student information easily.
+* ✏️ Update Students – Modify existing student details.
+* 🗑️ Delete Students – Remove student records.
+* 📊 Student Statistics – View department-wise and status-wise statistics.
+* 📁 CSV Export – Export student records into CSV files.
+* 📑 Student Reports – Generate student reports.
+* 🗄️ SQLite Database – Store and manage student records.
+* 🎨 Streamlit Dashboard – Interactive and creative user interface.
 
-1. Clone this repository:
-   `git clone https://github.com/LIMSI207/student-assistant-agent.git`
+🛠️ Technologies Used
 
-2. Open the project folder:
-   `cd student-assistant-agent`
+* Python
+* Streamlit
+* SQLite
+* Pandas
+* Google Gemini AI
+* Agno Framework
+* Git & GitHub
 
-3. Create and activate a virtual environment:
-   `python -m venv .venv`
+📂 Project Structure
 
-   Windows PowerShell:
-   `.\.venv\Scripts\Activate.ps1`
+student-assistant-agent/
+│
+├── app.py
+├── main.py
+├── auth.py
+├── database.py
+├── students.db
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── .env
 
-4. Install dependencies:
-   `pip install -r requirements.txt`
+⚙️ Installation & Setup
 
-5. Create a `.env` file in the project folder and add  Gemini API key:
+1. Clone the Repository
 
-   
+git clone https://github.com/LIMSI207/student-assistant-agent.git
 
-6. Run the application:
-   `python main.py`
+2. Open Project Folder
 
-## Security
-Never upload your API key or `.env` file to GitHub.
+cd student-assistant-agent
 
-## Author
-LIMSI207
+3. Create Virtual Environment
+
+python -m venv .venv
+
+4. Activate Virtual Environment
+
+Windows PowerShell:
+
+.venv\Scripts\Activate
+
+5. Install Dependencies
+
+pip install -r requirements.txt
+
+6. Configure Environment Variables
+
+Create a .env file in the project folder:
+
+GOOGLE_API_KEY=your_google_api_key
+GEMINI_MODEL=your_model_name
+
+7. Run the Application
+
+streamlit run app.py
+
+🚀 Project Objective
+
+The main objective of this project is to simplify student record management by providing an efficient, reliable, and user-friendly system.
+
+It combines database management, Python programming, and AI capabilities to improve student information handling.
+
+👩‍💻 Developer
+
+Limsi Patel
+
+* Branch: Computer Engineering
+* GitHub: LIMSI207
+
+⭐ If you find this project useful, don’t forget to star the repository!
+
+Thank you for visiting Student Assistant Agent!
