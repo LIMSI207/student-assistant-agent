@@ -33,8 +33,9 @@ An AI-powered Student Assistant built using Python, Agno, Google Gemini, and SQL
 4. Install dependencies:
    `pip install -r requirements.txt`
 
-5. Create a `.env` file in the project folder and add your Gemini API key:
-   `GOOGLE_API_KEY=your_api_key_here`
+5. Create a `.env` file in the project folder and add  Gemini API key:
+
+   
 
 6. Run the application:
    `python main.py`
